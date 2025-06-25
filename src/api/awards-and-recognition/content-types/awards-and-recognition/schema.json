@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "awards_and_recognitions",
+  "info": {
+    "singularName": "awards-and-recognition",
+    "pluralName": "awards-and-recognitions",
+    "displayName": "Awards and Recognition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "awardName": {
+      "type": "string",
+      "required": true
+    },
+    "year": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

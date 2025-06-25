@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "my_role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::my-role.my-role"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::client.client"
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "achievement": {
+      "type": "component",
+      "component": "shared.list",
+      "repeatable": true
+    }
+  }
+}
