@@ -482,7 +482,7 @@ export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
   };
   attributes: {
     achievement: Schema.Attribute.Component<'shared.list', true>;
-    client: Schema.Attribute.Relation<'oneToOne', 'api::client.client'>;
+    company: Schema.Attribute.Relation<'oneToOne', 'api::client.client'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -684,7 +684,10 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
       'api::project-category.project-category'
     >;
     projectCaseStudy: Schema.Attribute.RichText;
+    projectImage: Schema.Attribute.Media<'images' | 'files', true>;
+    projectImageBanner: Schema.Attribute.Media<'images'>;
     projectLink: Schema.Attribute.String & Schema.Attribute.Required;
+    projectVideo: Schema.Attribute.Media<'videos' | 'images'>;
     publishedAt: Schema.Attribute.DateTime;
     roles: Schema.Attribute.Relation<'oneToMany', 'api::my-role.my-role'>;
     updatedAt: Schema.Attribute.DateTime;

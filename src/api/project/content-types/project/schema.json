@@ -49,6 +49,29 @@
     },
     "year": {
       "type": "string"
+    },
+    "projectImage": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "projectImageBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "projectVideo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos",
+        "images"
+      ]
     }
   }
 }
